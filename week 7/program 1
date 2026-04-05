@@ -1,0 +1,37 @@
+program: #include <iostream>
+using namespace std;
+Class node
+{ public
+int data;
+node* Link;
+};
+int main()
+{ node * h = NULL, *cn= NULL, *t=NULL;
+int value;
+do
+{ cn = new node;
+// Cout <<" In Enter node data";
+cin >> value;
+cn->data = value;
+cn-> Link=NULL;
+if(h==NULL)
+{ h=cn;
+t=cn;
+}
+else
+{t->Link=cn;}
+t=cn;
+}
+Cout << "do you wanna to continue value 1/0: ";
+cin >> op;
+{
+while (op)
+Cout << "In linked list data!";
+t = h;
+while (t != NULL)
+{
+Cout << t -> link = cn;
+t = cn;
+t = t -> link;
+}
+}
