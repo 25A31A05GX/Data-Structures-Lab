@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+class Addition
+{
+private:
+    int n;
+    int *ptr;
+    int sum;
+
+public:
+    void getsize()
+    {
+        cout << "Enter number of elements: ";
+        cin >> n;
+        ptr = new int[n];
+    }
+
+    void getelements()
+    {
+        cout << "Enter " << n << " elements:\n";
+        for (int i = 0; i < n; i++)
+        {
+            cin >> ptr[i];
+        }
+    }
+
+    void calculate_sum()
+    {
+        sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            sum = sum + ptr[i];
+        }
+    }
+
+    void display_sum()
+    {
+        cout << "Sum of elements = " << sum << endl;
+    }
+
+    ~Addition()
+    {
+        delete[] ptr;
+    }
+};
+
+int main()
+{
+    Addition obj;
+    obj.getsize();
+    obj.getelements();
+    obj.calculate_sum();
+    obj.display_sum();
+
+    return 0;
+}
