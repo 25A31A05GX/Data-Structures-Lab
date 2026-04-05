@@ -1,0 +1,42 @@
+include <iostream>
+using namespace std;
+class node
+{
+public:
+int data;
+node *link;
+};
+int main()
+{
+node *h=NULL, *cn=NULL, *t= NULL;
+int value, ch;
+while (ch)
+{
+cn = new node();
+cout << "Enter node value: ";
+cin>> value;
+cn->data = value;
+cn->link = NULL;
+if (h== NULL)
+{
+h = cn;
+t = cn;
+}
+else
+{
+t->link = cn;
+t=cn;
+}
+cout << "do you want to create another node (0/1)";
+cin >>cn;
+if (ch==0)
+break;
+}
+t = h;
+cout << "linked list data: \n";
+while (t!= NULL)
+{
+cout<<t -> data << " ";
+t = t -> link;
+}
+}
