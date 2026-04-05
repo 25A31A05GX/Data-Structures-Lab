@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+class node
+{
+public:
+    int data;
+    node *link;
+};
+int main()
+{
+    node *h = NULL, *cn = NULL, *t = NULL;
+    int value, op;
+    do
+    {
+        cn = new node();
+        cout << "Enter node data!";
+        cin >> value;
+        cn->data = value;
+        cn->link = NULL;
+        if (h == NULL)
+        {
+            h = cn;
+            t = cn;
+        }
+        else
+        {
+            t->link = cn;
+            t = cn;
+        }
+        cout << "do you wanna Continue 1/0";
+        cin >> op;
+    } while (op);
+    t = h;
+while (t != Null)
+{ cout << t->data << " ";
+  t = t->link;
+}
+
+t = h;
+h = t->link;
+t->sLink = Null;
+delete t;
+
+cout << "\nIn NEW LINKED LIST DATA \n";
+t = h;
+while (t != NULL)
+{ cout << t->data << " ";
+  t = t->link;
+}
+cout << "\nIn NEW LINKED LIST DATA \n";
+t = h;
+while (t != NULL)
+{ cout << t->data << " ";
+  t = t->link;
+}
+}
