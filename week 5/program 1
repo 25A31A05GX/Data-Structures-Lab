@@ -16,7 +16,7 @@ public:
         ptr = new int[n];
     }
 
-    void getelements()
+    void get elements()
     {
         cout << "Enter " << n << " elements:\n";
         for (int i = 0; i < n; i++)
@@ -25,7 +25,7 @@ public:
         }
     }
 
-    void calculate_sum()
+    void calculate sum()
     {
         sum = 0;
         for (int i = 0; i < n; i++)
@@ -36,10 +36,10 @@ public:
 
     void display_sum()
     {
-        cout << "Sum of elements = " << sum << endl;
+        cout << "Sum of elements = " << sum << end;
     }
 
-    ~Addition()
+    Addition()
     {
         delete[] ptr;
     }
@@ -48,10 +48,10 @@ public:
 int main()
 {
     Addition obj;
-    obj.getsize();
-    obj.getelements();
-    obj.calculate_sum();
-    obj.display_sum();
+    obj.get size();
+    obj.get elements();
+    obj.calculate sum();
+    obj.display sum();
 
     return 0;
 }
